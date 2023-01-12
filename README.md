@@ -1,1 +1,4 @@
 # continuing-eduction
+
+## Potential Topics
+
