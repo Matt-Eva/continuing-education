@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 40px calc(100vh - 40px);
+    grid-template-columns: 100vw;
+}
+
+#sidebar {
+    display: hidden;
+}
