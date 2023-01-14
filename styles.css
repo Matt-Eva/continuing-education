@@ -1,5 +1,5 @@
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 * {
@@ -12,7 +12,7 @@ html {
 
 #body {
     display: grid;
-    grid-template-rows: 40px calc(100vh - 40px);
+    grid-template-rows: 50px calc(100vh - 50px);
     grid-template-columns: 200px calc(100vw - 200px);
 }
 
@@ -27,8 +27,14 @@ ul {
 
 #header {
     grid-row: 1;
-    grid-column: 1;
-    
+    grid-column: 1 / span 2;
+    border-bottom: solid;
+    border-width: 1px;
+
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: 50px calc(100vw - 50px);
+    align-items: center;
 }
 
 #menu-toggle div{
@@ -37,11 +43,23 @@ ul {
     border-width: 1px;
     width: 30px;
     margin: 5px 5px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+
+#header h1{
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
 }
 
 #sidebar {
     display: none;
     background-color: hsl(190, 100%, 75%);
+    padding-left: 5px;
+    border-right: solid;
+    border-width: 1px;
 }
 
 #body .show-sidebar{
@@ -68,7 +86,7 @@ ul {
 }
 
 #menu {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 #menu li{
@@ -81,12 +99,46 @@ ul {
     grid-row: 2;
     grid-column: 1 / span 2;
     overflow: scroll;
-    padding-bottom: 50px;
+    padding: 0px 10px 40px 10px;
+    scroll-behavior: smooth;
 }
 
-@media (min-width: 600px){
+#content h1{
+    margin: 10px 0px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+#content h2{
+    margin: 5px 0px;
+    margin-left: 20px;
+}
+
+#content h3 {
+    margin: 3px 0px;
+    margin-left: 40px;
+}
+
+#content ul {
+    margin-left: 60px;
+}
+
+#content li {
+    margin: 1px 0px;
+}
+
+@media (min-width: 650px){
     body {
         grid-template-columns: 200px calc(100vw - 200px)
+    }
+
+    #header {
+        grid-column: 2;
+        grid-template-columns: calc(100vw - 200px);
+    }
+
+    #header h1{
+        grid-column: 1;
     }
 
     #menu-toggle{
