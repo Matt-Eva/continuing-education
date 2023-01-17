@@ -35,4 +35,4 @@
 - NoSQL Databases
   - MongoDB - document
   - Neo4j - graph
-- 
+- Deploying
